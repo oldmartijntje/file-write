@@ -1,6 +1,10 @@
 import tkinter as tk
+import os
 
-logFile = open('actions.log', 'w')
+if os.path.exists('actions.log'):
+    logFile = open('actions.log', 'a')
+else:
+    logFile = open('actions.log', 'w')
 
 
 def aanUit():
